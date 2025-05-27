@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dolomiti Adventure Gear</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+        tailwind.config = {
+            theme: {
+            extend: {
+                fontFamily: {
+                dm: ['"DM Sans"', 'sans-serif'],
+                }
+            }
+            }
+        }
+        </script>       
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9bd61fa343.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <nav class="flex items-center justify-center bg-[#d9ecf2] shadow-2xl">
+                <div class="flex items-center justify-between sm:justify-start gap-8 px-4 py-4 w-full max-w-[1450px]">
+                    <a class="flex" href="./index.html">
+                        <img src="./img/logo.svg" class="w-[165px]" alt="Dolomiti Adventure Gear">
+                    </a>
+                    <ul id="nav-links" class="w-full hidden sm:flex items-center gap-12 font-bold">
+                        <li>
+                            <a href="" class="hover:bg-[#fafafa] px-3 py-2 rounded-md text-[#0e417d]! text-decoration-none">Shop</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="hover:bg-[#fafafa] px-3 py-2 rounded-md text-[#0e417d]! text-decoration-none">About Us</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html" class="hover:bg-[#fafafa] px-3 py-2 rounded-md text-[#0e417d]! text-decoration-none">Contact</a>
+                        </li>
+                        <li class="ml-auto pr-3">
+                            <a href="./shopping_cart.html">
+                                <i class="fa-solid fa-cart-shopping fa-xl" style="color: #0e417d"></i>     
+                            </a>                   
+                        </li>
+                    </ul>
+                    <div class="sm:hidden flex items-center gap-4 pr-4">
+                        <a href="/shopping_cart.html" aria-label="View cart">
+                            <i class="fa-solid fa-cart-shopping fa-xl text-[#0e417d] pr-4"></i>
+                        </a>
+                        <button
+                            id="menu-toggle"
+                            class="btn flex flex-col justify-center items-center"
+                            aria-label="Toggle navigation menu"
+                            aria-controls="mobile-overlay"
+                            aria-expanded="false"
+                            type="button"
+                        >
+                            <span class="block w-6 h-0.5 mb-1 bg-[#0e417d] rounded-sm"></span>
+                            <span class="block w-6 h-0.5 mb-1 bg-[#0e417d] rounded-sm"></span>
+                            <span class="block w-6 h-0.5 bg-[#0e417d] rounded-sm"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div
+            id="mobile-overlay"
+            class="bg-[#d9ecf2] fixed inset-0 z-50 hidden bg-opacity-95 flex-col items-center justify-center text-[#0e417d] text-xl font-bold sm:hidden py-4"
+            >
+                <button
+                    id="close-overlay"
+                    class="btn absolute top-4 right-6"
+                    aria-label="Close navigation menu"
+                    type="button"
+                >
+                    <i class="fa-solid fa-xmark fa-xl fa-[#0e417d]"></i>                
+                </button>
+                <ul class="flex flex-col pl-0!">
+                    <li class="border-b border-[#0e417d] pb-5 px-4">
+                        <a href="./index.html" class="pb-10">
+                            <img src="./img/logo.svg" class="w-[165px]" alt="Dolomiti Adventure Gear">
+                        </a>
+                    </li>
+                    <li class="flex"><a href="./about.html" class="w-full border-b border-[#0e417d] py-3 px-4 text-[#0e417d]! text-decoration-none">Shop</a></li>
+                    <li class="flex"><a href="./about.html" class="w-full border-b border-[#0e417d] py-3 px-4 text-[#0e417d]! text-decoration-none">About Us</a></li>
+                    <li class="flex"><a href="./contact.html" class="w-full border-b border-[#0e417d] py-3 px-4 text-[#0e417d]! text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section class="bg-[url(./img/hero-1.webp)] h-screen bg-no-repeat bg-cover max-h-[calc(100vh-60px)] md:max-h-[calc(100vh-80px)] bg-center relative min-h-[600px]">
+                <div class="absolute w-full h-full flex justify-center items-end px-4 py-4">
+                    <div class="w-full max-w-[1450px] pb-[50px] text-[#fafafa]">
+                        <h1 class="max-w-[350px] md:max-w-[500px] pb-8 text-[40px] md:text-[55px]">Ready For Your Next Adventure?</h1>
+                        <a class="border border-[#fafafa] px-4 py-3 rounded-lg hover:bg-[#0e417d] cursor-pointer transition-all ease-in-out transition-ease text-[#fafafa]! text-decoration-none">Shop Hiking Gear</a>
+                    </div>
+                </div>
+            </section>
+            <section class="flex items-center justify-center py-10">
+                <div class="flex flex-col md:flex-row justify-between md:items-center gap-5 px-4 py-4 w-full max-w-[1450px]">
+                    <div class="flex flex-col justify-center gap-8">
+                        <h2 class="md:max-w[450px] text-[40px] md:text-[55px] text-[#0e417d]">Get Travel Ready.</h2>
+                        <p class="md:max-w-[600px]">You need packs that can keep up with you,
+                        no matter where the path takes you. Our gear has been tested by our quality control team and these are the packs that made the cut. Dolomiti is a brand you can trust.</p>
+                        <a class="border border-[#0e417d]! px-4 py-3 rounded-lg hover:bg-[#0e417d] cursor-pointer transition-all ease-in-out transition-ease self-start hover:border-white hover:text-[#fafafa]! text-[#0e417d]! text-decoration-none">Explore All Backpacks</a>
+
+                    </div>
+                    <div>
+                        <img src="./img/backpack-intro.webp" class="w-full max-h-[500px]" alt="Four people walking on a trail with backpacks">
+                    </div>
+                </div>
+            </section>
+            <section class="flex items-center justify-center py-10">
+                <div class="flex flex-col md:items-center gap-5 px-4 py-4 w-full max-w-[1450px]">
+                    <h2 class="w-full text-center text-[40px] md:text-[55px]">Backpacks For Every Occasion.
+                    </h2>
+                    <div class="flex flex-col md:flex-row gap-8 justify-between sm:py-10">
+                        <div class="flex flex-col gap-3 w-full hover:scale-105 transition duration-200 ease-in-out">
+                            <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Patagonia Get Your There Backpack $205">
+                                <img src="./img/backpack-1.webp" class="w-full" alt="Patagonia Get Your There Backpack">
+                            </button>
+                            <div>
+                                <div class="flex gap-5 items-center">
+                                    <p>$205</p>
+                                    <div>
+                                        <div class="cursor-pointer w-[15px] h-[15px] rounded-xl bg-[#e2b808]">
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="" class="text-[#1a1a1a]! text-decoration-none">
+                                    <h3 class="font-bold">Patagonia Get Your There Backpack</h3>
+                                    <p>This backpack is built for your grandest adventures. It features two claps and easy access to your belongings making it your perfect adventure companion.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 w-full hover:scale-105 transition duration-200 ease-in-out">
+                            <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Rustic Getaway Pack $175">
+                                <img src="./img/backpack-2.webp" class="w-full" alt="Rustic Getaway Pack">
+                            </button>
+                            <div>
+                                <div class="flex gap-5 items-center">
+                                    <p>$175</p>
+                                    <div>
+                                        <div class="cursor-pointer w-[15px] h-[15px] rounded-xl bg-[#667538]">
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="" class="text-[#1a1a1a]! text-decoration-none">
+                                    <h3 class="font-bold">Rustic Getaway Pack</h3>
+                                    <p>For those who are looking for style along with versatility, look no further. This pack is made for the outdoor, but with some style.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 w-full hover:scale-103 transition duration-200 ease-in-out">
+                            <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="City Trek Backpack $325">
+                                <img src="./img/backpack-3.webp" class="w-full" alt="City Trek Backpack">
+                            </button>
+                            <div>
+                                <div class="flex gap-5 items-center">
+                                    <p>$325</p>
+                                    <div>
+                                        <div class="cursor-pointer w-[15px] h-[15px] rounded-xl bg-black"></div>
+                                    </div>
+                                </div>
+                                <a href="" class="text-[#1a1a1a]! text-decoration-none">
+                                    <h3 class="font-bold">City Trek Backpack</h3>
+                                    <p>This backpack is made for your morning commute. Fit you laptop and other essentials and go with this versatile pack.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="flex items-center justify-center py-10">
+                <div class="flex flex-col md:flex-row justify-between md:items-center gap-5 px-4 py-4 w-full max-w-[1450px]">
+                    <div>
+                        <img src="./img/hiking-boots-intro.webp" class="w-full max-h-[500px]" alt="A woman hiking in the mountains with her back to the camera and wearing hiking boots">
+                    </div>
+                    <div class="flex flex-col justify-center gap-8">
+                        <h2 class="md:max-w-[450px] text-[40px] md:text-[55px]">Tested in the Wild.</h2>
+                        <p class="md:max-w-[600px]">Outdoor adventures would not be complete without the correct gear, and we know your footwear can make the different between splashing in the rain and sloshing around in a down poor. That's why we only select the best footwear, guaranteeing that your time spent outside is safe and dry.</p>
+                        <a class="border border-[#0e417d]! px-4 py-3 rounded-lg hover:bg-[#0e417d] cursor-pointer transition-all ease-in-out transition-ease self-start hover:border-white hover:text-[#fafafa]! text-[#0e417d]! text-decoration-none">Explore All Hiking Shoes</a>
+                    </div>
+                </div>
+            </section>
+            <section class="flex items-center justify-center py-10">
+                <div class="flex flex-col md:items-center gap-5 px-4 py-4 w-full max-w-[1450px]">
+                    <h2 class="w-full text-center text-[40px] md:text-[55px]">Boots that can keep up with you.</h2>
+                    <div class="flex flex-col md:flex-row gap-8 justify-between sm:py-10">
+                        <div class="flex flex-col gap-3 w-full hover:scale-103 transition duration-200 ease-in-out">
+                            <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Women's Leather Hiking Boots $220">
+                                <img src="./img/boots-1.webp" class="w-full" alt="Women's Leather Hiking Boots">
+                            </button>
+                            <div>
+                                <div class="flex gap-5 items-center">
+                                    <p>$220</p>
+                                </div>
+                                <a href="" class="text-[#1a1a1a]! text-decoration-none">
+                                    <h3 class="font-bold">Women's Leather Hiking Boots</h3>
+                                    <p>These boots are a classic, high top hiking boot that are built for your messiest adventures. These boots will last a long time and can keep up with you.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 w-full hover:scale-103 transition duration-200 ease-in-out">
+                            <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Men's Leather Hiking Shoes $175">
+                                <img src="./img/boots-2.webp" class="w-full" alt="Men's Leather Hiking Shoes">
+                            </button>
+                            <div>
+                                <div class="flex gap-5 items-center">
+                                    <p>$175</p>
+                                </div>
+                                <a href="" class="text-[#1a1a1a]! text-decoration-none">
+                                    <h3 class="font-bold">Men's Leather Hiking Shoes</h3>
+                                    <p>If hiking boots aren't your thing, look no further. These hiking shoes will protect your feet just as well as boots, being made from the best materials. The rubber sole will keep the wet out and you dry.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 w-full hover:scale-103 transition duration-200 ease-in-out">
+                            <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Ultimate Rain Boots $325">
+                                <img src="./img/boots-3.webp" class="w-full" alt="Ultimate Rain Boots">
+                            </button>
+                            <div>
+                                <div class="flex gap-5 items-center">
+                                    <p>$325</p>
+                                </div>
+                                <a href="" class="text-[#1a1a1a]! text-decoration-none">
+                                    <h3 class="font-bold">Ultimate Rain Boots</h3>
+                                    <p>These rain boots are unisex and are perfect for getting around the city on the rainiest of days. Feel free to splash around as much as you want, these boots will not get wet.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="flex items-center justify-center py-10">
+                <div class="flex flex-col md:flex-row justify-between md:items-center gap-5 px-4 py-4 w-full max-w-[1450px]">
+                    <div class="flex flex-col justify-center gap-8">
+                        <h2 class="md:max-w-[450px] text-[40px] md:text-[55px]">Daring like you.</h2>
+                        <p class="md:max-w-[600px]">We know that you like to live life on the edge, and sometimes that's literal. Our tents are the perfect compliment to your wild side, allowing you to explore the outdoors just how you like, knowing that it's safe and tested.</p>
+                        <a class="border border-[#0e417d]! px-4 py-3 rounded-lg hover:bg-[#0e417d] cursor-pointer transition-all ease-in-out transition-ease self-start hover:border-white hover:text-[#fafafa]! text-[#0e417d]! text-decoration-none">Explore All Camping Tents</a>
+
+                    </div>
+                    <div>
+                        <img src="./img/tents-intro.webp" class="w-full max-h-[500px]" alt="A yellow camping tent on a grassy hill overlooking the mountains">
+                    </div>
+                </div>
+            </section>
+            <section class="flex items-center justify-center py-10">
+                <div class="flex flex-col md:items-center gap-5 px-4 py-4 w-full max-w-[1450px]">
+                    <h2 class="w-full text-center text-[40px] md:text-[55px]">Tents to keep you safe & secure.</h2>
+                    <div class="flex flex-col md:flex-row gap-8 justify-between sm:py-10">
+                        <div class="flex flex-col gap-3 w-full hover:scale-103 transition duration-200 ease-in-out">
+                            <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Rooftop Tent $1050">
+                                <img src="./img/tent-1.webp" class="w-full" alt="Rooftop Tent">
+                            </button>
+                            <div>
+                                <div class="flex gap-5 items-center">
+                                    <p>$1050</p>
+                                </div>
+                                <a href="" class="text-[#1a1a1a]! text-decoration-none">
+                                    <h3 class="font-bold">Rooftop Tent</h3>
+                                    <p>For the ultimate camping experience, try this rooftop tent. It's completely weather proof and easy to put up. No camping trip is complete without the perfect tent.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 w-full hover:scale-103 transition duration-200 ease-in-out">
+                            <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Air It All Out Tent $150">
+                                <img src="./img/tent-2.webp" class="w-full" alt="Air It All Out Tent">
+                            </button>
+                            <div>
+                                <div class="flex gap-5 items-center">
+                                    <p>$150</p>
+                                </div>
+                                <a href="" class="text-[#1a1a1a]! text-decoration-none">
+                                    <h3 class="font-bold">Air It All Out Tent</h3>
+                                    <p>When you want to enjoy the fresh air of the great outdoors, this is the tent for you. With plenty of ventilation, the tent offers great views while giving you the shelter you need.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 w-full hover:scale-103 transition duration-200 ease-in-out">
+                            <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="All Weather Tent $420">
+                                <img src="./img/tent-3.webp" class="w-full" alt="All Weather Tent">
+                            </button>
+                            <div>
+                                <div class="flex gap-5 items-center">
+                                    <p>$420</p>
+                                </div>
+                                <a href="" class="text-[#1a1a1a]! text-decoration-none">
+                                    <h3 class="font-bold">All Weather Tent</h3>
+                                    <p>When you don't know what to expect, this tent will guarantee you're prepared for whatever weather comes your way. It's fully waterproof, ensuring that you remain dry through the rainiest of nights.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="flex items-center justify-center py-10">
+                <div class="flex flex-col lg:flex-row justify-between lg:items-center gap-5 px-4 py-4 w-full max-w-[1450px]">
+                    <h2 class="lg:max-w-[450px] text-[40px] md:text-[55px]">Why Shop at Dolomiti?</h2>
+                    <div class="flex flex-col sm:flex-row gap-4 sm:justify-between">
+                        <div class="w-full sm:w-[33%] outline outline-black rounded-md px-3 py-4">
+                            <div class="h-[70px] flex items-center">
+                                <img src="./img/returns.svg" alt="package with an arrow around it">
+                            </div>
+                            <h3 class="font-bold pb-2">Easy Returns</h3>
+                            <p class="sm:max-w-[250px]">Sometimes things don't work out. That's ok. We got you covered.</p>
+                        </div>
+                        <div class="w-full sm:w-[33%] outline outline-black rounded-md px-3 py-4">
+                            <div class="h-[70px] flex items-center">
+                                <img src="./img/shipping.svg" class="h-[45px]" alt="a package in motion">
+                            </div>  
+                            <h3 class="font-bold pb-2">Free Shipping</h3>
+                            <p class="sm:max-w-[250px]">On all order over $50. Our fastest service for our best customers.</p>
+                        </div>
+                        <div class="w-full sm:w-[33%] outline outline-black rounded-md px-3 py-4">
+                            <div class="h-[70px] flex items-center">
+                                <img src="./img/guarantee.svg" class="h-[55px]" alt="a ribbon with a checkmark">
+                            </div>  
+                            <h3 class="font-bold pb-2">Dolomiti Guarantee</h3>
+                            <p class="sm:max-w-[250px]">We guarantee the best quality product, testing all products in-house.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-[url(./img/hero-2.webp)] h-screen bg-no-repeat bg-cover max-h-[calc(100vh-60px)] md:max-h-[calc(100vh-80px)] bg-center relative min-h-[600px]">
+                <div class="absolute w-full h-full flex justify-center items-end px-4 py-4">
+                    <div class="w-full max-w-[1450px] pb-[50px] text-[#fafafa]">
+                        <h1 class="max-w-[350px] md:max-w-[500px] pb-8 text-[40px] md:text-[55px] ">Need Some Inspiration for Your Next Trip?</h1>
+                        <a class="border boder-[#fafafa] px-4 py-3 rounded-lg hover:bg-[#0e417d] cursor-pointer transition-all ease-in-out transition-ease text-[#fafafa]! text-decoration-none">Visit Our Blog</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+        <script>
+            const menuToggle = document.getElementById('menu-toggle');
+            const overlay = document.getElementById('mobile-overlay');
+            const closeOverlay = document.getElementById('close-overlay');
+
+            menuToggle.addEventListener('click', () => {
+                const isOpen = overlay.classList.toggle('hidden');
+                menuToggle.setAttribute('aria-expanded', !isOpen);
+            });
+
+            closeOverlay.addEventListener('click', () => {
+                overlay.classList.add('hidden');
+                menuToggle.setAttribute('aria-expanded', false);
+            });
+        </script>
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+    </body>
+</html>
