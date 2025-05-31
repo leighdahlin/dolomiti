@@ -95,37 +95,41 @@
         </header>
         <main class="bg-[#fafafa] flex justify-center min-h-screen">
             <div class="flex flex-col w-full max-w-[1450px] px-4 pt-4 pb-8 lg:py-15">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
-                        </ol>
-                    </nav>                
-                    <div class="grid grid-rows-[1fr, 1fr] lg:grid-cols-12 gap-10">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                    </ol>
+                </nav>                
+                <div class="grid grid-rows-[1fr, 1fr] lg:grid-cols-12 gap-10">
                     <section class="row-span-1 lg:col-span-8">
                         <h1 class="text-[#0e417d]! text-[30px] md:text-[40px] pb-5">Ready When You Are</h1>
                         <div class="flex flex-col w-full">
-                            <div class="flex gap-6 border-b border-[#e5e6e7] pb-8">
-                                <img src="./img/boots-1.webp" class="w-[150px] lg:w-[200px]"/>
-                                <div class="flex flex-col gap-2 w-full justify-between">
-                                    <div class="flex flex-col gap-2 justify-between">
+                            <div class="flex flex-col sm:flex-row gap-6 border-b border-[#e5e6e7] pb-8 sm:items-stretch">
+                                <div class="flex justify-between items-start">
+                                    <img src="./img/boots-1.webp" class="w-full max-w-[150px] sm:max-w-[300px] h-auto sm:h-full object-cover"/>
+                                    <button
+                                    class="btn sm:hidden! flex cursor-pointer"
+                                    aria-label="Close navigation menu"
+                                    type="button"
+                                    >
+                                        <i class="fa-solid fa-xmark fa-xl fa-[#0e417d]"></i>                
+                                    </button>
+                                </div>
+                                <div class="flex flex-col gap-4 sm:gap-2 w-full justify-between">
+                                    <div class="flex flex-col gap-4 sm:gap-2 justify-between">
                                         <div class="flex justify-between">
-                                            <h3 class="font-bold text-[1.5rem]">Women's Leather Hiking Boots</h3>                                          
-                                            <button
-                                                id="close-overlay"
-                                                class="btn lg:hidden flex pt-5 cursor-pointer"
-                                                aria-label="Close navigation menu"
-                                                type="button"
-                                            >
-                                                <i class="fa-solid fa-xmark fa-xl fa-[#0e417d]"></i>                
-                                            </button>                                
-                                        </div>                                    <p>Brown</p>
-                                        <p>Size 8.5</p>
-                                        <div class="grid grid-cols-2 sm:grid-cols-3 ml-auto gap-8">
-                                            <div class="hidden sm:block flex flex-col justify-between">
+                                            <h3 class="font-bold text-[1.5rem]">Women's Leather Hiking Boots</h3>
+                                        </div>                                    
+                                        <div class="flex flex-col gap-2">
+                                            <p class="text-sm text-[#2e2e2bbf]">Color: Brown</p>
+                                            <p class="text-sm text-[#2e2e2bbf]">Size: 8.5</p>
+                                        </div>
+                                        <div class="grid grid-cols-3 sm:ml-auto gap-8">
+                                            <div class="flex flex-col justify-between">
                                                 <p class="mb-2">Item Price</p>
                                                 <p>$220.00</p>
                                             </div>
-                                            <div class="flex flex-col">
+                                            <div class="flex flex-col justify-between">
                                                 <label for="quantity" class="mb-2">Quantity</label>
                                                 <select name="quantity" id="quantity" class="form-select form-select border rounded px-2 py-1">
                                                     <option value="1">1</option>
@@ -134,31 +138,44 @@
                                                     <option value="4">4</option>
                                                 </select>                                    
                                             </div>
-                                            <div class="flex flex-col justify-between">
+                                            <div class="flex flex-col justify-between items-end pr-[12px]">
                                                 <p class="mb-2">Subtotal</p>
                                                 <p>$220.00</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex justify-between">
-                                        <p>Free Shipping + Free Returns</p>
-                                        <p class="hidden lg:block underline cursor-pointer">Remove</p>
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-bold bg-[#d9ecf2] px-2 py-1 rounded-sm">Free Shipping + Free Returns</p>
+                                        <p class="hidden sm:block underline cursor-pointer">Remove</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex gap-6 border-b border-[#e5e6e7] pb-8 pt-8">
-                                <img src="./img/tent-2.webp" class="w-[150px] lg:w-[200px]"/>
-                                <div class="flex flex-col gap-2 w-full justify-between">
-                                    <div class="flex flex-col gap-2 justify-between">
-                                        <h3 class="font-bold text-[1.5rem]">Air It All Out Tent</h3>                                
-                                        <p>Yellow</p>
-                                        <p>One Size</p>
-                                        <div class="grid grid-cols-3 ml-auto gap-8">
+                            <div class="flex flex-col sm:flex-row gap-6 border-b border-[#e5e6e7] pb-8 pt-8 sm:items-stretch">
+                                <div class="flex justify-between items-start">
+                                    <img src="./img/tent-2.webp" class="w-full max-w-[150px] sm:max-w-[300px] h-auto sm:h-full object-cover"/>
+                                    <button
+                                    class="btn sm:hidden! flex cursor-pointer"
+                                    aria-label="Close navigation menu"
+                                    type="button"
+                                    >
+                                        <i class="fa-solid fa-xmark fa-xl fa-[#0e417d]"></i>                
+                                    </button>
+                                </div>                                
+                                <div class="flex flex-col gap-4 sm:gap-2 w-full justify-between">
+                                    <div class="flex flex-col gap-4 sm:gap-2 justify-between">
+                                        <div class="flex justify-between">
+                                            <h3 class="font-bold text-[1.5rem]">Air It All Out Tent</h3>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <p class="text-sm text-[#2e2e2bbf]">Color: Yellow</p>
+                                            <p class="text-sm text-[#2e2e2bbf]">Size: One Size</p>
+                                        </div>
+                                        <div class="grid grid-cols-3 sm:ml-auto gap-8">
                                             <div class="flex flex-col justify-between">
                                                 <p class="mb-2">Item Price</p>
                                                 <p>$150.00</p>
                                             </div>
-                                            <div class="flex flex-col">
+                                            <div class="flex flex-col justify-between">
                                                 <label for="quantity" class="mb-2">Quantity</label>
                                                 <select name="quantity" id="quantity" class="form-select border rounded px-2 py-1">
                                                     <option value="1">1</option>
@@ -167,31 +184,44 @@
                                                     <option value="4">4</option>
                                                 </select>                                    
                                             </div>
-                                            <div class="flex flex-col justify-between">
+                                            <div class="flex flex-col justify-between items-end pr-[12px]">
                                                 <p class="mb-2">Subtotal</p>
                                                 <p>$150.00</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex justify-between">
-                                        <p>Free Shipping + Free Returns</p>
-                                        <p class="underline cursor-pointer">Remove</p>
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-bold bg-[#d9ecf2] px-2 py-1 rounded-sm">Free Shipping + Free Returns</p>
+                                        <p class="hidden sm:block underline cursor-pointer">Remove</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex gap-6 border-b border-[#e5e6e7] pb-8 pt-8">
-                                <img src="./img/backpack-2.webp" class="w-[150px] lg:w-[200px]"/>
-                                <div class="flex flex-col gap-2 w-full justify-between">
-                                    <div class="flex flex-col gap-2 justify-between">
-                                        <h3 class="font-bold text-[1.5rem]">Rustic Getaway Pack</h3>                                
-                                        <p>Brown</p>
-                                        <p>One Size</p>
-                                        <div class="grid grid-cols-3 ml-auto gap-8">
+                            <div class="flex flex-col sm:flex-row gap-6 sm:border-b border-[#e5e6e7] pb-8 pt-8 sm:items-stretch">
+                                <div class="flex justify-between items-start">
+                                    <img src="./img/backpack-2.webp" class="w-full max-w-[150px] sm:max-w-[300px] h-auto sm:h-full object-cover"/>
+                                    <button
+                                    class="btn sm:hidden! flex cursor-pointer"
+                                    aria-label="Close navigation menu"
+                                    type="button"
+                                    >
+                                        <i class="fa-solid fa-xmark fa-xl fa-[#0e417d]"></i>                
+                                    </button>
+                                </div>                                
+                                <div class="flex flex-col gap-4 sm:gap-2 w-full justify-between">
+                                    <div class="flex flex-col gap-4 sm:gap-2 justify-between">
+                                        <div class="flex justify-between">
+                                            <h3 class="font-bold text-[1.5rem]">Rustic Getaway Pack</h3>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <p class="text-sm text-[#2e2e2bbf]">Color: Brown</p>
+                                            <p class="text-sm text-[#2e2e2bbf]">Size: One Size</p>
+                                        </div>                      
+                                        <div class="grid grid-cols-3 sm:ml-auto gap-8">
                                             <div class="flex flex-col justify-between">
                                                 <p class="mb-2">Item Price</p>
                                                 <p>$175.00</p>
                                             </div>
-                                            <div class="flex flex-col">
+                                            <div class="flex flex-col justify-between">
                                                 <label for="quantity" class="mb-2">Quantity</label>
                                                 <select name="quantity" id="quantity" class="form-select border rounded px-2 py-1">
                                                     <option value="1">1</option>
@@ -200,20 +230,21 @@
                                                     <option value="4">4</option>
                                                 </select>                                    
                                             </div>
-                                            <div class="flex flex-col justify-between">
+                                            <div class="flex flex-col justify-between items-end pr-[12px]">
                                                 <p class="mb-2">Subtotal</p>
                                                 <p>$350.00</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex justify-between">
-                                        <p>Free Shipping + Free Returns</p>
-                                        <p class="underline cursor-pointer">Remove</p>
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-bold bg-[#d9ecf2] px-2 py-1 rounded-sm">Free Shipping + Free Returns</p>
+                                        <p class="hidden sm:block underline cursor-pointer">Remove</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>  
+                    <a href="checkout.html" class="sm:hidden text-center border border-[#0e417d]! px-4 py-3 rounded-lg hover:bg-[#0e417d] cursor-pointer transition-all ease-in-out transition-ease self-start hover:border-white hover:text-[#fafafa]! text-[#0e417d]! text-decoration-none">Continue to Checkout</a>
                     <section class="row-span-1 row-start-1 lg:col-span-4 lg:col-start-10">
                         <h2 class="text-[#0e417d] text-[30px] md:text-[40px] pb-5">Order Summary</h2>
                         <div class="flex flex-col">
@@ -229,12 +260,11 @@
                                 <div>Tax</div>
                                 <div>Calculated at checkout</div>
                             </div>
-                            <div class="flex justify-between border-b border-[#e5e6e7] pb-4 pt-4">
+                            <div class="flex justify-between pb-4 pt-4">
                                 <div class="font-bold text-[1.1875rem]">Estimated Total</div>
                                 <div class="font-bold text-[1.1875rem]">$720.00</div>
                             </div>
-                            <a href="checkout.html" class="border border-[#0e417d]! px-4 py-3 rounded-lg hover:bg-[#0e417d] cursor-pointer transition-all ease-in-out transition-ease self-start hover:border-white hover:text-[#fafafa]! text-[#0e417d]! text-decoration-none">Continue to Checkout</a>
-
+                            <a href="checkout.html" class="w-full sm:w-fit text-center sm:text-left border border-[#0e417d]! px-4 py-3 rounded-lg hover:bg-[#0e417d] cursor-pointer transition-all ease-in-out transition-ease self-start hover:border-white hover:text-[#fafafa]! text-[#0e417d]! text-decoration-none">Continue to Checkout</a>
                         </div>
                     </section>                
                 </div>
